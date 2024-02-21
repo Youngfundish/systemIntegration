@@ -1,0 +1,1 @@
+Altid brug module i package.json, så man ikke bruger require
