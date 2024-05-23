@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick=sendGreeting()>Click me</button>
+    <script>
+        const ws = new WebSocket("ws://localhost:8080");
+        ws.onopen = () => {
+            console.log("connected")
+        }
+
+        ws.onerror = () => {
+            console.log("Error")
+        }
+        ws.onmessage = (message)=> {
+            console.log("message recieved", event.data)
+        }
+        function sendGreeting() {
+            ws.send("hej")
+        }
+    </script>
+</body>
+
+</html>

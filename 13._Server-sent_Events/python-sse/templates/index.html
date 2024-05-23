@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE</title>
+</head>
+<body>
+    <div id="date"></div>
+
+    <script>
+        const datDiv = document.getElementById("date");
+
+        const eventSource = new EventSource("sse");
+
+        eventSource.onmessage = (event) => {
+            datDiv.textContent = event.data;
+            // console.log(event);
+        }
+    </script>
+</body>
+</html>

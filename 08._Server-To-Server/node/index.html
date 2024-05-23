@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Data</title>
+</head>
+<body>
+
+<h1>Data Display</h1>
+<div id="data-container"></div>
+
+<script>
+// Get the data passed from the Express route
+const data = JSON.parse('<%- JSON.stringify(data) %>');
+
+// Display the data on the page
+document.getElementById('data-container').innerText = JSON.stringify(data);
+</script>
+
+</body>
+</html>
