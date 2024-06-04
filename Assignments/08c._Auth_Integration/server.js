@@ -13,6 +13,10 @@ const config = {
   issuerBaseURL: "https://dev-fah7aemgjg6sityt.us.auth0.com",
   secret: "LONG_RANDOM_STRING",
 };
+// Auth0
+// Username and password
+// test@test.com
+// Test1234&
 
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));

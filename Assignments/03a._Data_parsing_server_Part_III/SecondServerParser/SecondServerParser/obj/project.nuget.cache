@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T5JbMzy0UvKBLXB1D0tSA6QScfzmm5DpBfcS1bv4oH0Cp+UpuXE8VVZY3deN6rWS/J00CNwDvoKcKjKZRy6sUA==",
+  "dgSpecHash": "pcX2qJoErlcmuA2gnTrTXiEEfuTxLJllK2h36eH2J8uCng9CztjhORU7Ivtqrah4j28xysZop5z9nCsq3J/Igw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\funde\\source\\repos\\systemIntegration\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj",
+  "projectFilePath": "C:\\Users\\funde\\source\\repos\\systemIntegration\\Assignments\\03a._Data_parsing_server_Part_III\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\funde\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\funde\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

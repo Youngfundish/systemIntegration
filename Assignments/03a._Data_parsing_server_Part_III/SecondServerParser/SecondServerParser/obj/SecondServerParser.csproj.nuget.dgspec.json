@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\funde\\source\\repos\\systemIntegration\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj": {}
+    "C:\\Users\\funde\\source\\repos\\systemIntegration\\Assignments\\03a._Data_parsing_server_Part_III\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj": {}
   },
   "projects": {
-    "C:\\Users\\funde\\source\\repos\\systemIntegration\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj": {
+    "C:\\Users\\funde\\source\\repos\\systemIntegration\\Assignments\\03a._Data_parsing_server_Part_III\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\funde\\source\\repos\\systemIntegration\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj",
+        "projectUniqueName": "C:\\Users\\funde\\source\\repos\\systemIntegration\\Assignments\\03a._Data_parsing_server_Part_III\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj",
         "projectName": "SecondServerParser",
-        "projectPath": "C:\\Users\\funde\\source\\repos\\systemIntegration\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj",
+        "projectPath": "C:\\Users\\funde\\source\\repos\\systemIntegration\\Assignments\\03a._Data_parsing_server_Part_III\\SecondServerParser\\SecondServerParser\\SecondServerParser.csproj",
         "packagesPath": "C:\\Users\\funde\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\funde\\source\\repos\\systemIntegration\\SecondServerParser\\SecondServerParser\\obj\\",
+        "outputPath": "C:\\Users\\funde\\source\\repos\\systemIntegration\\Assignments\\03a._Data_parsing_server_Part_III\\SecondServerParser\\SecondServerParser\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\funde\\AppData\\Roaming\\NuGet\\NuGet.Config",
