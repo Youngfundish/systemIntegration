@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><database name="gabdb" schema="public" type="PostgreSQL - 16.3">
+   <sequences>
+      <sequence increment="1" name="books_id_seq" startValue="1"/>
+      <sequence increment="1" name="borrowers_id_seq" startValue="1"/>
+      <sequence increment="1" name="libraries_id_seq" startValue="1"/>
+      <sequence increment="1" name="playing_with_neon_id_seq" startValue="1"/>
+   </sequences>
+   <tables>
+      <table name="books" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('books_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="title" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="author" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="library_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
+            <parent column="id" foreignKey="books_library_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="libraries"/>
+         </column>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="books_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="borrowers" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('borrowers_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="library_id" nullable="false" remarks="" size="10" type="int4" typeCode="4">
+            <parent column="id" foreignKey="borrowers_library_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="libraries"/>
+         </column>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="borrowers_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="libraries" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('libraries_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4">
+            <child column="library_id" foreignKey="books_library_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="books"/>
+            <child column="library_id" foreignKey="borrowers_library_id_fkey" implied="false" onDeleteCascade="false" schema="public" table="borrowers"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="city" nullable="false" remarks="" size="255" type="varchar" typeCode="12"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="libraries_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table name="playing_with_neon" remarks="" schema="public" type="TABLE">
+         <column autoUpdated="true" defaultValue="nextval('playing_with_neon_id_seq'::regclass)" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="2147483647" type="text" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="8" id="2" name="value" nullable="true" remarks="" size="8" type="float4" typeCode="7"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="playing_with_neon_pkey" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+   </tables>
+</database>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Reader Example</title>
+</head>
+<body>
+    <input type="file" id="fileInput">
+    <pre id="fileContent"></pre>
+
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function() {
+                const fileContent = reader.result;
+                document.getElementById('fileContent').textContent = fileContent;
+            };
+
+            reader.onerror = function() {
+                console.error('Error reading file');
+            };
+
+            reader.readAsText(file);
+        });
+    </script>
+</body>
+</html>
