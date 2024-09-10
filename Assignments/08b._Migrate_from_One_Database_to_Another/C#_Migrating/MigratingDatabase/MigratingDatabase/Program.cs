@@ -1,11 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MigratingDatabase.Models;
 using MigratingDatabase;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
 
 class Program
 {
     static void Main(string[] args)
     {
+        //Lav et nyt projekt
+        //Kør derefter denne i PM Scaffold-DbContext "Server=.\SQLExpress;Database=SchoolDB;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer - OutputDir Models
+        //Det giver models og DBContext
         var oldOptions = new DbContextOptionsBuilder<ServiceContractDBContext>()
             .UseSqlServer("Server=LAPTOP-0HJL08GI\\SQLEXPRESS;Database=ServiceContractDB;Trusted_Connection=True")
             .Options;
